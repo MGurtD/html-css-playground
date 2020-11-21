@@ -1,116 +1,61 @@
-header, main{
-    padding: 1.5% 20%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
+    font-family: 'Montserrat', sans-serif;
 }
 
-header, nav, footer, #glossari, .article-intro{
-    font-family: Arial, Helvetica, sans-serif;
+#index-body{
+    background-image: url(../img/home.jpg); 
+    background-position: 0 0; 
+    background-size: cover;
+    text-align: center;
 }
 
-h1, h2{
-    font-family: sans-serif;
+#index-body main {
+    display: table-cell;
+    vertical-align: middle;
+    height: 80vh;
+    width: 100vw;
 }
 
-header {
-    background-color: black;
+#img-infocovid-big {
+    margin: auto;
+    width: 510px;
+    height: 300px;
+    background-image: url(../img/infocovid_big.svg);
+    background-size: cover;
+}
+
+#index-body main h1  {
+    color: #A01127;
+}
+
+#index-body main nav ul li {    
+    display: inline;
+    list-style: none;
+    margin: 10px;
+}
+
+#index-body main nav ul li a {
+    color: #77AFDF;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+
+#index-body main nav ul li a:hover {
+    color: #A01127;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+#index-body footer {
     color: white;
+    height: 15vh;
 }
 
-header div {
-    display: inline-block;
-}
-
-#header-img {
-    float: right;
-    height: 125px;
-    width:  125px;
-}
-
-nav {
-    border-bottom: 2px #FC6A03 solid;
-    text-align: center;
-}
-
-nav ul li{
-    display: inline-block;
-    margin: 0px 10px;
-}
-
-nav ul li a{
-    color: black;
-    outline: none;
+#index-body footer a {
+    color: white;
     text-decoration: none;
-}
-
-.current-nav-item{
-    font-weight: bold;
-}
-
-.section-title {
-    font-size: 2em;
-}
-
-.article-intro {
-    font-size: 1.5em;
-    color: #FC6A03;
-    font-weight: bold;
-    margin-right: 8%;
-}
-
-#index blockquote {
-    margin-left: 5%;
-    border-left: 2px gray solid;
-    font-size: 1.3rem;
-}
-
-#index blockquote p {
-    margin-left: 2%;
-}
-
-main > figure {
-    text-align: right;
-}
-
-section > figure {
-    text-align: center;
-}
-
-figcaption {
-    font-size: 0.8rem;
-    margin-top : 10px;
-}
-
-dt {
-    display: block;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.external-link {
-    outline: none;
-    text-decoration: none;
-    color: #FC6A03;
-}
-
-.external-link-with-img {
-    outline: none;
-    text-decoration: none;
-    color: #FC6A03;
-    background-image: url(../img/external_link.svg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 10px 10px;
-    padding-right: 15px;
-}
-
-#author {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 50px;
-    margin-right: 85px;
-    margin-left: 85px;
-}
-
-footer {
-    padding: 10px 0;
-    text-align: center;
+    color: #A01127;
+    border-bottom: 1.5px #A01127 dashed;
 }
