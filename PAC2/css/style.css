@@ -4,6 +4,8 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Estils per index.html */
+
 #index-body{
     background-image: url(../img/home.jpg); 
     background-position: 0 0; 
@@ -33,7 +35,7 @@ html {
 #index-body main nav ul li {    
     display: inline;
     list-style: none;
-    margin: 10px;
+    margin: 1rem;
 }
 
 #index-body main nav ul li a {
@@ -53,9 +55,104 @@ html {
     height: 15vh;
 }
 
-#index-body footer a {
+#index-body footer a, address a {
     color: white;
     text-decoration: none;
     color: #A01127;
     border-bottom: 1.5px #A01127 dashed;
+}
+
+/* Estils per web_salut.html, mesures_benestar.html i certificat.html */
+
+body {
+    background-color: rgb(252,252,252);
+    margin: 0px;
+}
+
+.secondary-header, .secondary-main, .secondary-footer {
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.secondary-header {
+    background-color: #F0F1F3;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+
+.secondary-header nav ul li {
+    display: inline;
+    margin: 1rem;
+}
+
+.secondary-header nav ul li a {
+    color: #77AFDF;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+
+.secondary-header nav ul li a:hover {
+    color: #A01127;
+    text-decoration-line: underline;
+}
+
+.nav-current-item {
+    text-decoration-line: underline !important;
+}
+
+.secondary-main h1, strong {
+    color: #A01127;
+}
+
+.secondary-main h2 {
+    color: #A01127;
+    border-bottom: solid 1px  #A01127;
+}
+
+.secondary-main h3 {
+    color: #77AFDF;
+}
+
+ol > li {
+    margin-bottom: 1rem;
+}
+
+ol > li > ul {
+    list-style: square;
+}
+
+article#related-videos > article {
+    margin: auto;
+    width: 80%;
+}
+
+.youtube-video {
+    display: flex;
+    justify-content: center;
+}
+
+.youtube-video > iframe {
+    height: 450px;
+    width: 80%;
+}
+
+article#related-videos > address, .secondary-footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.secondary-footer {
+    background-color: #BBB;
+    color: white;
+}
+
+.secondary-footer a {
+    margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.secondary-footer a:hover {
+    color:  #A01127;
+    text-decoration-line: underline;
 }
