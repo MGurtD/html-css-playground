@@ -4,6 +4,22 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Recomenacions guía d'estil formularis MDN (https://developer.mozilla.org/ca/docs/Learn/CSS/Building_blocks/Images_media_form_elements) */
+
+button, 
+input, 
+select, 
+textarea { 
+  font-family: inherit; 
+  font-size: 100%; 
+  box-sizing: border-box; 
+  padding: 0; margin: 0; 
+} 
+
+textarea { 
+  overflow: auto; 
+} 
+
 /* Estils per index.html */
 
 #index-body{
@@ -28,7 +44,7 @@ html {
     background-size: cover;
 }
 
-#index-body main h1  {
+h1, strong {
     color: #A01127;
 }
 
@@ -53,6 +69,11 @@ html {
 #index-body footer {
     color: white;
     height: 15vh;
+}
+
+address {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 #index-body footer a, address a {
@@ -100,10 +121,6 @@ body {
     text-decoration-line: underline !important;
 }
 
-.secondary-main h1, strong {
-    color: #A01127;
-}
-
 .secondary-main h2 {
     color: #A01127;
     border-bottom: solid 1px  #A01127;
@@ -113,12 +130,30 @@ body {
     color: #77AFDF;
 }
 
+.normal-link {
+    color: #77AFDF;
+    text-decoration-color: #77AFDF;
+    text-decoration-style: dashed;
+}
+
+.normal-link:hover {
+    color: #A01127;
+    text-decoration-color: #A01127;
+    text-decoration-style: dashed;
+}
+
 ol > li {
     margin-bottom: 1rem;
 }
 
 ol > li > ul {
     list-style: square;
+}
+
+ul > li {
+    list-style: none;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 article#related-videos > article {
@@ -139,6 +174,85 @@ article#related-videos > article {
 article#related-videos > address, .secondary-footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    caption-side: bottom;
+    font-style: italic;
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    text-align: right;
+}
+
+thead {
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+}
+
+thead > tr > th {
+    font-weight: normal;
+    padding: 0.8rem;
+}
+
+tbody tr th {
+    text-align: left;
+}
+
+tbody tr td, tbody th td{
+    padding: 0.5rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(119, 175, 223,0.2);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(119, 175, 223,0.4);
+}
+
+fieldset {
+    margin-top: 1.5rem;
+}
+
+fieldset input, fieldset select {
+    padding: 2px;
+}
+
+.field {
+    display: inline-grid;
+    padding: calc(1rem / 3);
+    width: calc(100% / 3 - 1rem);
+}
+
+input[type=submit] {
+    background-color:  #A01127;
+    border-radius: 0.8rem;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+form > p{
+    background-color: lightgray;
+    padding: 0.4rem;
+    width: fit-content;    
+}
+
+form > div > p {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    width: 60%;
 }
 
 .secondary-footer {

@@ -32,6 +32,164 @@
 
     <main class="secondary-main">
       
+      <form action="#">
+        <h1>Certificat autoresponsable de desplaçament per la crisi sanitària per la COVID-19</h1>
+        <p>Els camps assenyalats amb <strong><abbr title="required">*</abbr></strong> són obligatoris.</p>
+
+        <fieldset>
+          <legend>Dades personals</legend>
+
+          <div class="field">
+            <label for="nom">Nom <strong>*</strong></label>
+            <input type="text" id="nom" name="txt-nom" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" minlength="2" maxlength="64" required />
+          </div>
+          <div class="field">
+            <label for="primer_cognom">Primer cognom <strong>*</strong></label>
+            <input type="text" id="primer_cognom" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" name="txt-primercognom" minlength="2" maxlength="128" required />
+          </div>
+          <div class="field">
+            <label for="segon_cognom">Segon cognom</label>
+            <input type="text" id="segon_cognom" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" name="txt-segoncognom" minlength="2" maxlength="128" />
+          </div>
+          <div class="field">
+            <label for="tipus_document">Document d'identificació <strong>*</strong></label>
+            <select id="tipus_document">
+              <option value="dni" selected>DNI/NIF</option>
+              <option value="nie">NIE</option>
+              <option value="passaport">Passaport</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="document">&nbsp;</label>
+            <input type="text" id="document" name="txt-document" required/>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Trajecte</legend>
+
+          <div class="field">
+            <label for="data_desplacament">Data del desplaçament <strong>*</strong></label>
+            <input type="date" id="data_desplacament" name="date-desplacament" required/>
+          </div>
+
+          <p>Certifico que el meu desplaçament està relacionat amb l'activitat especificada a continuació (marqueu la casella):</p>
+          
+          <ul>
+            <li>
+              <input type="checkbox" id="adquisicio_necessitat" name="chk-adquisicionecessitat" value="adquisicio_necessitat">
+              <label for="adquisicio_necessitat">Adquisició d'aliments, productes farmacèutics i de primera necessitat.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="assistencia_lloc" name="chk-assistencialloc" value="assistencia_lloc">
+              <label for="assistencia_lloc">Assistència a centre, servei o establiment sanitari.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="desplacament_personal" name="chk-desplacamentpersonal" value="desplacament_personal">
+              <label for="desplacament_personal">Desplaçament al lloc de treball per efectuar la prestació laboral, professional o empresarial.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="retorn_lloc" name="chk-retornlloc" value="retorn_lloc">
+              <label for="retorn_lloc">Retorn al lloc de residència habitual.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="assistencia_altres" name="chk-assistenciaaltres" value="assistencia_altres">
+              <label for="assistencia_altres">Assistència o atenció a persones grans, menors d'edat, dependents, persones amb discapacitat o persones especialment vulnerables.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="despacament_entitat" name="chk-despacamententitat" value="despacament_entitat">
+              <label for="despacament_entitat">Desplaçament a entitat financera o d'assegurança.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="forca_major" name="chk-forcamajor" value="forca_major">
+              <label for="forca_major">Causa de força major o situació de necessitat.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sortida_menors" name="chk-sortidamenors" value="sortida_menors">
+              <label for="sortida_menors">Sortida d'infants i adolescents.</label>
+            </li>
+            <li>
+              <ul>
+                <li>Nombre de menors:</li>
+                <li>
+                  <input type="radio" id="nombre_menors_1" name="radio-menors" value="1">
+                  <label for="nombre_menors_1">1</label>
+                </li>
+                <li>
+                  <input type="radio" id="nombre_menors_2" name="radio-menors" value="2">
+                  <label for="nombre_menors_2">2</label>
+                </li>
+                <li>
+                  <input type="radio" id="nombre_menors_3" name="radio-menors" value="3">
+                  <label for="nombre_menors_3">3</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="sortida_passejos" name="chk-sortidapassejos" value="sortida_passejos">
+              <label for="sortida_passejos">Sortida passejos majors de 70 anys i dependents </label>
+            </li>
+            <li>
+              <input type="checkbox" id="sortida_activitat" name="chk-adquisicionecessitat" value="sortida_activitat">
+              <label for="sortida_activitat">Sortida activitat física i passeig a partir de 14 anys </label>
+            </li>
+          </ul>
+          
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Adreça d'origen</legend>
+
+          <div class="field">
+            <label for="origen_cp">Codi postal <strong>*</strong></label>
+            <input type="text" id="origen_cp" name="txt-origen-cp" required />
+          </div>
+          <div class="field">
+            <label for="origen_provincia">Província <strong>*</strong></label>
+            <input type="text" id="origen_provincia" name="txt-origen-provincia" required />
+          </div>
+          <div class="field">
+            <label for="origen_comarca">Comarca</label>
+            <input type="text" id="origen_comarca" name="txt-origen-comarca" />
+          </div>
+          <div class="field">
+            <label for="origen_municipi">Municipi <strong>*</strong></label>
+            <input type="text" id="origen_municipi" name="txt-origen-municipi" required />
+          </div>    
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Adreça de destinació</legend>
+          
+          <div class="field">
+            <label for="desti_cp">Codi postal <strong>*</strong></label>
+            <input type="text" id="desti_cp" name="txt-desti-cp" required />
+          </div>
+          <div class="field">
+            <label for="desti_provincia">Província <strong>*</strong></label>
+            <input type="text" id="desti_provincia" name="txt-desti-provincia" required />
+          </div>
+          <div class="field">
+            <label for="desti_comarca">Comarca</label>
+            <input type="text" id="desti_comarca" name="txt-desti-comarca" />
+          </div>
+          <div class="field">
+            <label for="desti_municipi">Municipi <strong>*</strong></label>
+            <input type="text" id="desti_municipi" name="txt-desti-municipi" required />
+          </div>
+        </fieldset>
+
+        <div>
+          <p><b>Informació bàsica relativa a la protecció de dades</b></p>
+          <p>L’informem que les dades recollides seran tractades per la Direcció General d’Administració Digital, del Departament de Polítiques Digitals i Administració Pública de la Generalitat de Catalunya, per tal de donar-li suport en l’elaboració de la declaració autoresponsable. Podrà exercir els drets d’accés, rectificació, supressió, oposició al tractament i sol·licitud de limitació de les dades mitjançant el següent enllaç: <a class="normal-link" href="http://politiquesdigitals.gencat.cat/ca/pgov_departament/proteccio-de-dades/drets-de-les-persones-interessades/" hreflang="ca">http://politiquesdigitals.gencat.cat/ca/pgov_departament/proteccio-de-dades/drets-de-les-persones-interessades/</a></p>
+        </div>
+
+        <input type="submit" value="Generar certificat" />
+      </form>
+
+      <address>Font: <a href="https://certificatdes.confinapp.cat/" hreflang="ca">Certificat autoresponsable de desplaçament per la crisi sanitària per la COVID-19</a></address>
     </main>
 
     <footer class="secondary-footer">
