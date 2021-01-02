@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;1,700&display=swap');
+
+:root {
+    --background-color: #e8e8e8;
+    --footer-background-color: #433A44;
+    --primary-color: #1c1c1c;
+    --secondary-color: #FFFFFF;
+    --link-color: #9b1700;
+}
+
+html {
+    font-family: 'Noto Serif', serif;
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    color: var(--secondary-color);
+}
+
+button {
+    background-color: var(--link-color);
+    border: 0;
+    border-radius: 0.2rem;
+    color: var(--secondary-color);
+    padding: 0.6rem;
+}
+
+.contrast {
+    color: #9b1700;
+}
