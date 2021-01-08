@@ -12,7 +12,9 @@
 
 body {
     font-family: 'Noto Serif', serif;    
-    margin: 0%;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0px;
     padding: 0%;
     width: 100%;
 }
@@ -33,38 +35,36 @@ header {
     text-align: center;
 }
 
-header a {
+.logo__link, .nav__menu__link {
     color: var(--primary-color);    
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 }
 
-header a:hover {
+.logo__link:hover, .nav__menu__link:hover {
     color: var(--main-link-color-hover);
 }
 
-header div:nth-child(2) > a  {
-    font-size: 2rem;
-    font-family: 'Noto Serif', serif;    
+.logo__link  {
+    font-size: 2rem;    
     display: flex;
     margin: auto;
     align-items: center;
     justify-content: center;
 }
 
-nav > ul {
+.nav__menu {
     padding-inline-start: 0px;
     font-weight: bold;
     list-style: none;
 }
 
-nav > ul > li{
+.nav__menu__item {
     margin: 0.5rem;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    margin: 0px;
+.nav__menu__link--current {
+    font-style: oblique;
 }
 
 #index-main {
@@ -97,7 +97,7 @@ body {
     font-size: 0.6rem;
 }
 
-.howto-img {
+.howto__img {
     height: 180px;    
     width: 180px;
 }
@@ -150,7 +150,7 @@ body {
     color: var(--main-link-color-hover);
 }
 
-.clubs-films {
+.club-films {
     margin: 3rem auto;
 }
 
@@ -161,7 +161,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.clubs-films__title {
+.club-films__title {
     font-family: 'Open Sans', sans-serif;
     font-weight:bolder;
     font-size: 1.5rem;
@@ -194,7 +194,11 @@ body {
 /* Final => Sessions 2020 */
 
 .section {
-    margin: 1rem;
+    padding: 1rem;
+}
+
+.section--bottom-dashed {
+    border-bottom: 0.2rem dotted var(--link-color);
 }
 
 .span {
@@ -214,31 +218,25 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0px;
-    margin: 0px;
+    margin-top: 1rem;
 }
 
-.footer__about, .footer__socialmedia, .footer__author {
+.nav__menu--secondary, .nav__menu--tiny {
     margin: 1rem;
+    font-weight: normal;
     text-align: center;
 }
 
-.footer__author {
+.nav__menu--tiny {
     font-size: 0.8rem;
 }
 
-.footer__menu {
-    padding-inline-start: 0px;
-    list-style-type: none;
-    margin-left: 1rem;
-    text-align: center;
-}
-
-.footer__menu__link {
+.nav__menu__link--secondary {
     color: var(--secondary-color);
     text-decoration: none;
 }
 
-.footer__menu__link:hover {
+.nav__menu__link--secondary:hover {
     color: var(--link-color);
     text-decoration: none;
 }
@@ -284,7 +282,7 @@ button:hover {
         justify-items: center;
     }
 
-    .howto-img {
+    .howto__img {
         height: 150px;
         width: 150px;
     }
@@ -304,19 +302,28 @@ button:hover {
 
 /* Breakpoint for tablet portait  */
 @media (min-width: 768px) {
-    header {
+    .header {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
     }
 
-    nav {
+    .nav__menu--md-inline {
         grid-row: 1;
         grid-column: 2;
     }
 
-    nav > ul > li {
+    .nav__menu--md-inline > .nav__menu__item {
         display: inline;
+    }
+
+    .nav__menu--secondary .nav__menu__item {
+        display: inline-block;
+        margin: 0.8rem;
+    }
+
+    .nav__menu--tiny {
+        text-align: left;
     }
 
     header > div:nth-child(1) {
@@ -376,32 +383,27 @@ button:hover {
 
     .footer {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         align-items: center;
         justify-content: center;
     }
 
-    .footer__about {
+    .footer > .nav:nth-child(1){
         grid-row: 1;
-        grid-column: 1 / 6;
+        grid-column: 1;
         justify-self: start;
     }
 
-    .footer__socialmedia {
+    .footer > .nav:nth-child(2) {
         grid-row: 1;
-        grid-column: 9 / 13;
+        grid-column: 2;
     }
 
-    .footer__author {
+    .footer > .nav:nth-child(3) {
         grid-row: 2;
-        grid-column: 1 / 4;
+        grid-column: 1 / 2;
         justify-self: start;
-    }
-
-    .footer__menu__item {
-        display: inline-block;
-        margin: 0.8rem;
     }
 
 }
@@ -410,10 +412,10 @@ button:hover {
 @media (min-width: 1024px) {
     main {
         margin: 0 auto;
-        width: 60%;
+        width: 65%;
     }
 
-    .howto-img {
+    .howto__img {
         height: 120px;
         width: 120px;
     }

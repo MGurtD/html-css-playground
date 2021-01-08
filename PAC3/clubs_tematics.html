@@ -12,23 +12,27 @@
 </head>
 <body>
 
-    <header class="block-margin">
+    <header class="header">
 
-        <div>
-            <a href=""><button>Inicia Sessió</button></a>
+        <div class="signin">
+            <button class="button button--red">Inicia Sessió</button>
         </div>
         
-        <div>
-            <a href="index.html">
-                <img src="./img/oscarsclub-isologo.png" alt="logo">
+        <div class="logo">
+            <a class="logo__link" href="index.html">
+                <img class="logo__img" src="./img/oscarsclub-isologo.png" alt="logo">
                 <strong>&nbsp;oscars</strong><span class="link">club</span>
             </a>
         </div>
         
-        <nav>
-            <ul>
-                <li><a href="" hreflang="ca" class="current-nav-item">CLUBS TEMÁTICS</a></li>
-                <li><a href="sessions_2020.html" hreflang="ca">SESSIONS 2020</a></li>
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--md-inline">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--current" href="#" hreflang="ca">CLUBS TEMÁTICS</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link" href="sessions_2020.html" hreflang="ca">SESSIONS 2020</a>
+                </li>
             </ul>
         </nav>
 
@@ -71,7 +75,7 @@
                 <img class="club__img" src="./img/club5.jpg" />
                 <p class="club__title"><span class="club__title__points">......</span>Posem-nos romàntics</p>
                 <p class="club__description">A qui no li agrada una bona història d'amor? Benvinguts a l'espai dels relats fantàstics i els finals feliços.</p>
-                <a class="link club__link" href="sessions_2020.html#club-romatic">El 2020 veurem... +</a>
+                <a class="link club__link" href="sessions_2020.html#club-romantic">El 2020 veurem... +</a>
             </div>
             
             <div id="club-nacional" class="club">
@@ -85,31 +89,49 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
 
-        <section class="block-margin">
-            <ul>
-                <li><a href="" hreflang="ca">Sobre Nosaltres</a></li>
-                <li><a href="" hreflang="ca">Avís legal</a></li>
-                <li><a href="" hreflang="ca">Política de privacitat</a></li>
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--secondary">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Sobre Nosaltres</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Avís legal</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link  nav__menu__link--secondary" href="" hreflang="ca">Política de privacitat</a>
+                </li>
             </ul>
-        </section>
+        </nav>
 
-        <section class="block-margin">
-            <ul>
-                <li><a href="" hreflang="ca">Facebook</a></li>
-                <li><a href="" hreflang="ca">Twitter</a></li>
-                <li><a href="" hreflang="ca">Youtube</a></li>
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--secondary">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Facebook</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Twitter</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Youtube</a>
+                </li>
             </ul>
-        </section>
+        </nav>
 
-        <section class="block-margin">
-            <ul>
-                <li>© 2020 Marc Gurt Dot</li>
-                <li>Icones <a href="https://www.flaticon.com">flaticon.com</a></li>
-                <li>Imatges <a href="https://unsplash.com">unsplash.com</a></li>
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--tiny">
+                <li class="nav__menu__item">
+                    © 2020 Marc Gurt Dot
+                </li>
+                <li class="nav__menu__item">
+                    Icones <a class="nav__menu__link  nav__menu__link--secondary" href="https://www.flaticon.com">flaticon.com</a>
+                </li>
+                <li class="nav__menu__item">
+                    Imatges <a class="nav__menu__link  nav__menu__link--secondary" href="https://unsplash.com">unsplash.com</a>
+                </li>
             </ul>
-        </section>
+        </nav>
 
     </footer>
     

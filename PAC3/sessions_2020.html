@@ -26,12 +26,12 @@
         </div>
         
         <nav class="nav">
-            <ul class="nav__menu">
+            <ul class="nav__menu nav__menu--md-inline">
                 <li class="nav__menu__item">
                     <a class="nav__menu__link" href="clubs_tematics.html" hreflang="ca">CLUBS TEMÁTICS</a>
                 </li>
                 <li class="nav__menu__item">
-                    <a class="nav__menu__link nav__menu__link--current" href="" hreflang="ca">SESSIONS 2020</a>
+                    <a class="nav__menu__link nav__menu__link--current" href="#" hreflang="ca">SESSIONS 2020</a>
                 </li>
             </ul>
         </nav>
@@ -40,7 +40,7 @@
 
     <main id="sessions-main">
 
-        <section class="section section--club-heading">
+        <section class="section section--club-heading section--bottom-dashed">
             <h1>Sessions 2020</h1>
             <p>Els coordinadors de l'Oscars Club han tingut en compte i han valorat les propostes dels socis de cada club i han seleccionat les obres a visionar durant el 2020.</p>
             <p>Si encara no formes part del Club, inscriu-te i gaudeix amb nosaltres del cinema.</p>
@@ -50,24 +50,24 @@
             <h2>Sessions per club</h2>
 
             <nav class="nav">
-                <ul class="club-menu">
-                    <li class="club-menu__item">
-                        <a class="club-menu__link" href="#">GUARDONATS</a>
+                <ul class="nav__menu">
+                    <li class="nav__menu__item">
+                        <a class="nav__menu__link" href="#">GUARDONATS</a>
                     </li>
-                    <li class="club-menu__item">
-                        <a class="club-menu__link" href="#">A L'ESPAI</a>
+                    <li class="nav__menu__item">
+                        <a class="nav__menu__link" href="#">A L'ESPAI</a>
                     </li>
-                    <li class="club-menu__item">
-                        <a class="club-menu__link" href="#">UNA DOSI D'INTRIGA</a>
+                    <li class="nav__menu__item">
+                        <a class="nav__menu__link" href="#">UNA DOSI D'INTRIGA</a>
                     </li>
-                    <li class="club-menu__item">
-                        <a class="club-menu__link" href="#">UNA ALTRA ÈPOCA</a>
+                    <li class="nav__menu__item">
+                        <a class="nav__menu__link" href="#">UNA ALTRA ÈPOCA</a>
                     </li>
-                    <li class="club-menu__item">
-                        <a class="club-menu__link" href="#">POSEM-NOS ROMANTICS</a>
+                    <li class="nav__menu__item">
+                        <a class="nav__menu__link" href="#">POSEM-NOS ROMANTICS</a>
                     </li>
-                    <li class="club-menu__item">
-                        <a class="club-menu__link" href="#">NACIONAL</a>
+                    <li class="nav__menu__item">
+                        <a class="nav__menu__link" href="#">NACIONAL</a>
                     </li>
                 </ul>
             </nav>
@@ -76,8 +76,8 @@
 
         <section class="section section--club-films">
             
-            <div class="clubs-films">
-                <h2 class="clubs-films__title"><span class="span span--red">...</span>Guardonats</h2>
+            <div id="club-guardonats" class="club-films">
+                <h2 class="club-films__title"><span class="span span--red">...</span>Guardonats</h2>
                 <div class="club-films__item">
 
                     <figure class="film">
@@ -97,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="clubs-films">
+            <div id="club-cienciaficcio" class="club-films">
                 <h2 class="clubs-films__title"><span class="span span--red">...</span>A l'espai</h2>
                 <div class="club-films__item">
                     <figure class="film">
@@ -118,8 +118,8 @@
             </div>
 
             
-            <div class="clubs-films">
-                <h2 class="clubs-films__title"><span class="span span--red">...</span>Una dosi d'intriga</h2>
+            <div id="club-intriga" class="club-films">
+                <h2 class="club-films__title"><span class="span span--red">...</span>Una dosi d'intriga</h2>
                 <div class="club-films__item">
                     <figure class="film">
                         <img class="film__img" src="./img/club3-movie1.jpg" alt="">
@@ -138,8 +138,8 @@
                 </div>
             </div>
 
-            <div class="clubs-films">
-                <h2 class="clubs-films__title"><span class="span span--red">...</span>Una altra època</h2>
+            <div id="club-classics" class="club-films">
+                <h2 class="club-films__title"><span class="span span--red">...</span>Una altra època</h2>
                 <div class="club-films__item">
                     <figure class="film">
                         <img class="film__img" src="./img/club4-movie1.jpg" alt="">
@@ -158,8 +158,8 @@
                 </div>
             </div>            
             
-            <div class="clubs-films">
-                <h2 class="clubs-films__title"><span class="span span--red">...</span>Posem-nos romàntics</h2>
+            <div id="club-romantic" class="club-films">
+                <h2 class="club-films__title"><span class="span span--red">...</span>Posem-nos romàntics</h2>
                 <div class="club-films__item">
                     <figure class="film">
                         <img class="film__img" src="./img/club5-movie1.jpg" alt="">
@@ -178,8 +178,8 @@
                 </div>
             </div>            
 
-            <div class="clubs-films">
-                <h2 class="clubs-films__title"><span class="span span--red">...</span>Nacional</h2>
+            <div id="club-nacional" class="club-films">
+                <h2 class="club-films__title"><span class="span span--red">...</span>Nacional</h2>
                 <div class="club-films__item">
                     <figure class="film">
                         <img class="film__img" src="./img/club6-movie1.jpg" alt="">
@@ -204,44 +204,44 @@
 
     <footer class="footer">
 
-        <nav class="footer__about">
-            <ul class="menu menu--footer">
-                <li class="footer__menu__item">
-                    <a class="footer__menu__link" href="" hreflang="ca">Sobre Nosaltres</a>
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--secondary">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Sobre Nosaltres</a>
                 </li>
-                <li class="footer__menu__item">
-                    <a class="footer__menu__link" href="" hreflang="ca">Avís legal</a>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Avís legal</a>
                 </li>
-                <li class="footer__menu__item">
-                    <a class="footer__menu__link" href="" hreflang="ca">Política de privacitat</a>
-                </li>
-            </ul>
-        </nav>
-
-        <nav class="footer__socialmedia">
-            <ul class="footer__menu">
-                <li class="footer__menu__item">
-                    <a class="footer__menu__link" href="" hreflang="ca">Facebook</a>
-                </li>
-                <li class="footer__menu__item">
-                    <a class="footer__menu__link" href="" hreflang="ca">Twitter</a>
-                </li>
-                <li class="footer__menu__item">
-                    <a class="footer__menu__link" href="" hreflang="ca">Youtube</a>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link  nav__menu__link--secondary" href="" hreflang="ca">Política de privacitat</a>
                 </li>
             </ul>
         </nav>
 
-        <nav class="footer__author">
-            <ul class="footer__menu">
-                <li class="footer__menu__item">
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--secondary">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Facebook</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Twitter</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Youtube</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--tiny">
+                <li class="nav__menu__item">
                     © 2020 Marc Gurt Dot
                 </li>
-                <li class="footer__menu__item">
-                    Icones <a class="footer__menu__link" href="https://www.flaticon.com">flaticon.com</a>
+                <li class="nav__menu__item">
+                    Icones <a class="nav__menu__link  nav__menu__link--secondary" href="https://www.flaticon.com">flaticon.com</a>
                 </li>
-                <li class="footer__menu__item">
-                    Imatges <a class="footer__menu__link" href="https://unsplash.com">unsplash.com</a>
+                <li class="nav__menu__item">
+                    Imatges <a class="nav__menu__link  nav__menu__link--secondary" href="https://unsplash.com">unsplash.com</a>
                 </li>
             </ul>
         </nav>
