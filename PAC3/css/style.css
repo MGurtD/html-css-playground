@@ -24,14 +24,25 @@ main {
     width: 90%;
 }
 
+dl > dt {
+    border-bottom: 1px solid var(--primary-color);
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
 header, footer, form, input, button {
     font-family: 'Open Sans', sans-serif;
 }
 
-header {
+.header {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.nav--breadcum {
     text-align: center;
 }
 
@@ -53,6 +64,16 @@ header {
     justify-content: center;
 }
 
+.nav__menu--secondary, .nav__menu--tiny {
+    margin: 1rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.nav__menu--tiny {
+    font-size: 0.8rem;
+}
+
 .nav__menu {
     padding-inline-start: 0px;
     font-weight: bold;
@@ -63,8 +84,24 @@ header {
     margin: 0.5rem;
 }
 
+.nav__menu__link--secondary {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.nav__menu__link--secondary:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
 .nav__menu__link--current {
     font-style: oblique;
+}
+
+.img--left-rounded{
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(); 
 }
 
 #index-main {
@@ -81,7 +118,7 @@ header {
     margin-bottom: 2rem;
 }
 
-#index-main-register-container form > input {
+.form__input {
     border: 1px solid black;
     font-size: 1rem;
     margin: 0.5rem auto;
@@ -100,6 +137,26 @@ header {
 .howto__img {
     height: 180px;    
     width: 180px;
+}
+
+.video__container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video__caption {
+    font-style: oblique;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Inici => Clubs temátics */
@@ -197,10 +254,6 @@ header {
     padding: 1rem;
 }
 
-.section--bottom-dashed {
-    border-bottom: 0.2rem dotted var(--link-color);
-}
-
 .span {
     font-size: 1.5rem;
 }
@@ -221,37 +274,20 @@ header {
     margin-top: 1rem;
 }
 
-.nav__menu--secondary, .nav__menu--tiny {
-    margin: 1rem;
-    font-weight: normal;
-    text-align: center;
-}
-
-.nav__menu--tiny {
-    font-size: 0.8rem;
-}
-
-.nav__menu__link--secondary {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.nav__menu__link--secondary:hover {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-button {
-    background-color: var(--link-color);
+.button {
     border: 0;
     border-radius: 0.2rem;
-    color: var(--secondary-color);
     cursor: pointer;
     font-size: 1rem;
     padding: 0.8rem;
 }
 
-button:hover {
+.button--red {
+    background-color: var(--link-color);
+    color: var(--secondary-color);
+}
+
+.button--red:hover {
     background-color: var(--link-color-hover);
 }
 
@@ -306,6 +342,14 @@ button:hover {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section--bottom-dashed {
+        border-bottom: 0.2rem dotted var(--link-color);
+    }
+
+    .nav--breadcum {
+        text-align: left;
     }
 
     .nav__menu--md-inline {
@@ -379,6 +423,20 @@ button:hover {
 
     .film__title {
         font-size: 1.2rem;
+    }
+
+    .section--tech-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem
+    }
+
+    .section--tech-card > article:nth-child(1) {
+        grid-column: 1;
+    }
+
+    .section--tech-card > article:nth-child(2) {
+        grid-column: 2 / 4;
     }
 
     .footer {
