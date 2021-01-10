@@ -6,6 +6,7 @@
     <meta name="author" content="Marc Gurt Dot">
     <meta name="description" content="M4.252 - HTML i CSS. PAC 3">
 
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="./css/style.css">
     <title>Oscars Club</title>
 </head>
@@ -13,40 +14,151 @@
 
     <header>
 
-        <div>
-            <a href=""><button>Inicia Sessió</button></a>
+        <div class="signin">
+            <button class="button button--red">Inicia Sessió</button>
         </div>
         
-        <div>
-            <a href=""><img src="./img/oscarsclub-isologo.png" alt="logo">oscars<span class="contrast">club</span></a>
+        <div class="logo">
+            <a class="logo__link" href="index.html">
+                <img class="logo__link__img" src="./img/oscarsclub-isologo.png" alt="logo">
+                <div class="logo__link__text">
+                    <strong>&nbsp;oscars</strong><span>club</span>
+                </div>
+            </a>
         </div>
         
-        <nav>
-            <ul>
-                <li><a href="" hreflang="ca">CLUBS TEMÁTICS</a></li>
-                <li><a href="" hreflang="ca">SESSIONS 2020</a></li>
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--md-inline">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link" href="clubs_tematics.html" hreflang="ca">CLUBS TEMÁTICS</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link" href="sessions_2020.html" hreflang="ca">SESSIONS 2020</a>
+                </li>
             </ul>
         </nav>
 
     </header>
 
-    <main>
+    <main id="index-main">
 
         <section>
-            <h1></h1>
+            <h1>Què és Oscars Club?</h1>
+            <p>Oscars Club organitza clubs virtuals de cinema de diversos gèneres i en diferents llengües, per als amants del cinema que vulguin compartir reflexions i debatre sobre les pel·lícules que els interessen sense necessitat d'haver d'anar a un espai físic.</p>
         </section>
 
         <section>
+            <h1>Com funciona?</h1>
             
+            <div class="howto-container">
+                <figure class="howto">
+                    <img class="howto__img" src="img/howto-register.png"
+                        alt="Registra't">
+                
+                    <figcaption class="howto__text">Registra't</figcaption>
+                </figure>
+
+                <figure class="howto">
+                    <img class="howto__img" src="img/howto-club.png"
+                        alt="Inscriu-te en un club de cinema">
+                
+                    <figcaption class="howto__text">Inscriu-te en un club de cinema</figcaption>
+                </figure>
+
+                <figure class="howto">
+                    <img class="howto__img" src="img/howto-film.png"
+                        alt="Tria una pel·lícula">
+                
+                    <figcaption class="howto__text">Tria una pel·lícula</figcaption>
+                </figure>
+
+                <figure class="howto">
+                    <img class="howto__img" src="img/howto-speech.png"
+                        alt="Gaudeix del debat">
+                
+                    <figcaption class="howto__text">Gaudeix del debat</figcaption>
+                </figure>
+            </div>
+
         </section>
 
         <section>
+            <h1>Uneix-te al club</h1>
+
+            <div id="register-container">
+                <p>
+                    Estem mirant la teva propera pel·lícula preferida.<br>T'ho perdràs?
+                </p>
+                
+                <form class="form" action="#">
+
+                    <input class="form__input" placeholder="Nom" type="text" id="name" name="txt-name" required />
+                    <input class="form__input" placeholder="Correu electrònic" type="text" id="mail" name="txt-mail" required />
+                    <input class="form__input" placeholder="Constrasenya" type="password" id="password" name="txt-password" required />
+                    
+                    <p class="form__text">
+                        INFORMACIÓ SOBRE PROTECCIÓ DE DADES DE <strong>OSCARS CLUB. Finalitats:</strong> recollida de dades per a la inscripció com a soci de l'interessat. Legitimació: Consentiment de l'interessat. <strong>Destinataris</strong>: No estan previstes cessions de dades a tercers, excepte obligació legal. <strong>Drets</strong>: Pot retirar el seu consentiment en qualsevol moment, així com accedir, rectificar, suprimir les seves dades i altres drets dirigint-se a oscarsclub@oscarsclub.org. <strong>Informació Addicional</strong>: Pot ampliar la informació en l'enllaç d'<a class="link" href="">Avís Legal</a> i <a class="link" href="">Política de privacitat</a>.
+                    </p>
+
+                    <p class="form__checkbox">
+                        <input type="checkbox" id="confirmation" value="chk-confirmation" required><label for="confirmation">He llegit i accepto la política de privacitat</label>
+                    </p>
+                    
+                    <button class="button button--red" title="Registre" type="submit">REGISTRA'M</button>
+                </form>
+            </div>
             
         </section>
 
     </main>
 
     <footer>
+
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--secondary">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Sobre Nosaltres</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Avís legal</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link  nav__menu__link--secondary" href="" hreflang="ca">Política de privacitat</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--secondary">
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Facebook</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Twitter</a>
+                </li>
+                <li class="nav__menu__item">
+                    <a class="nav__menu__link nav__menu__link--secondary" href="" hreflang="ca">Youtube</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="nav">
+            <ul class="nav__menu nav__menu--tiny">
+                <li class="nav__menu__item">
+                    © 2020 Marc Gurt Dot
+                </li>
+                <li class="nav__menu__item">
+                    Icones <a class="nav__menu__link  nav__menu__link--secondary" href="https://www.flaticon.com">flaticon.com</a>
+                </li>
+                <li class="nav__menu__item">
+                    Imatges <a class="nav__menu__link  nav__menu__link--secondary" href="https://unsplash.com">unsplash.com</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a id="link-to-top" href="#">
+            &xwedge;
+        </a>
 
     </footer>
     

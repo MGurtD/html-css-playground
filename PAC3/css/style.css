@@ -2,50 +2,510 @@
 
 :root {
     --background-color: #e8e8e8;
-    --footer-background-color: #433A44;
     --primary-color: #1c1c1c;
     --secondary-color: #FFFFFF;
-    --link-color: #9b1700;
+    --brown: #433A44;    
+    --red: rgb(155, 23, 0);
+    --red-hover: rgba(155, 23, 0, 0.5);
+    --black-hover: rgba(28, 28, 28, 0.5);
 }
 
-html {
-    font-family: 'Noto Serif', serif;
+body {
+    font-family: 'Noto Serif', serif;    
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0px;
+    padding: 0%;
+    width: 100%;
 }
 
-a {
-    color: var(--font-color);
-    text-decoration: none;
+footer, form, input, .button, .nav__menu__link {
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    gap: 1rem;
+    padding: 2rem;
     text-align: center;
 }
 
-nav > ul {
-    list-style: none;
+h1 {
+    font-size: 2rem;
+    text-align: center;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--font-color);
+main {
+    margin: 0 auto;
+    width: 90%;
+}
+
+dl > dt {
+    border-bottom: 1px solid var(--primary-color);
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+section {
+    padding: 1rem;
 }
 
 footer {
-    background-color: var(--footer-background-color);
+    background-color: var(--brown);
     color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin-top: 1rem;
 }
 
-button {
-    background-color: var(--link-color);
+.logo__link, .nav__menu__link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo__link:hover, .nav__menu__link:hover {
+    color: var(--black-hover);
+}
+
+.logo__link  {
+    font-size: 2rem;    
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo__link__text > span {
+    color: var(--red);
+    font-style: oblique;
+}
+
+.nav--breadcum {
+    text-align: center;
+}
+
+.nav__menu {
+    padding-inline-start: 0px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.nav__menu--secondary, .nav__menu--tiny {
+    margin: 1rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.nav__menu--tiny {
+    font-size: 0.8rem;
+}
+
+.nav__menu__item {
+    margin: 0.5rem;
+}
+
+.nav__menu__link--secondary {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.nav__menu__link--secondary:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.nav__menu__link--current {
+    font-style: oblique;
+}
+
+.img--left-rounded{
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle(); 
+}
+
+#index-main {
+    text-align: center;
+}
+
+.howto-container, #index-main-register-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#register-container {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+#register-container p:first-child {
+    font-size: 1.2rem;
+}
+
+.form__input {
+    border: 1px solid black;
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    width: 95%;
+}
+
+.form__checkbox, .form__text {
+    font-size: 0.6rem;
+}
+
+.howto__img {
+    height: 180px;    
+    width: 180px;
+}
+
+.video__container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video__caption {
+    font-style: oblique;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#clubs-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.club__img {
+    max-width: 100%;
+    max-height: 230px;
+}
+
+.club__title {
+    font-size: 1.3rem;
+}
+
+.club__title__points {
+    color: var(--red);
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.club__link {
+    display: block;
+}
+
+.club-menu {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding-inline-start: 0px;
+    list-style: none;
+}
+
+.club-menu__item > a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.club-menu__item > a:hover {
+    color: var(--black-hover);
+}
+
+.club-films {
+    margin: 3rem auto;
+}
+
+.club-films__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.club-films__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:bolder;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.film {
+    background-color: white;
+    box-shadow: 2px 2px 10px var(--brown);
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+}
+
+.film__link {
+    text-decoration: none;
+}
+
+.film__link:hover {
+    opacity: 0.5;
+}
+
+.film__img {
+    width: 100%;
+    height: auto;
+}
+
+.film__title {
+    color: var(--red);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-left: 0.4rem;
+    padding-bottom: 0.8rem;
+}
+
+.span {
+    font-size: 1.5rem;
+}
+
+.span--red {
+    color: var(--red);
+    margin-right: 1rem;
+}
+
+#link-to-top {
+    align-self: end;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    justify-self: end;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.button {
     border: 0;
     border-radius: 0.2rem;
-    color: var(--secondary-color);
-    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.8rem;
 }
 
-.contrast {
-    color: #9b1700;
+.button--red {
+    background-color: var(--red);
+    color: var(--secondary-color);
+}
+
+.button--red:hover {
+    background-color: var(--red-hover);
+}
+
+.link {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--red-hover);
+}
+
+/*
+ Breakpoints inspirats amb Tailwind: https://tailwindcss.com/docs/responsive-design
+*/
+
+/* Breakpoint for mobile landscape  */
+@media (min-width: 640px) {
+    main {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .howto-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px ,1fr));
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .howto__img {
+        height: 150px;
+        width: 150px;
+    }
+
+    #clubs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .club-films__item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .film {
+        width: 100%;
+    }
+}
+
+/* Breakpoint for tablet portait  */
+@media (min-width: 768px) {
+    header {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #sessions-heading {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #sessions-by-club, #sessions-club-films {
+        border-top: 0.2rem dotted var(--red);
+    }
+
+    .nav--breadcum {
+        text-align: left;
+    }
+
+    .nav__menu--md-inline {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .nav__menu--md-inline > .nav__menu__item {
+        display: inline;
+    }
+
+    .nav__menu--secondary .nav__menu__item {
+        display: inline-block;
+        margin: 0.8rem;
+    }
+
+    .nav__menu--tiny {
+        text-align: left;
+    }
+
+    .signin {
+        grid-row: 1;
+        grid-column: 3;
+        margin-right: 1rem;
+        align-self: end;
+        justify-self: end;
+    }
+
+   .logo {
+        grid-row: 1;
+        grid-area: 1;
+        margin-left: 1rem;
+        align-self: start;
+        justify-self: start;
+    }
+
+    #register-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    #clubs-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #sessions-main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: .2 .8;
+    }
+
+    #sessions-heading {
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+
+    #sessions-by-club {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #sessions-club-films {
+        grid-column: 2 / 5;
+        grid-row: 2;
+    }
+
+    .club-films__item {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .film__title {
+        font-size: 1.2rem;
+    }
+
+    .master-detail {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem
+    }
+
+    .master-detail > .master {
+        grid-column: 1;
+    }
+
+    .master-detail > .detail {
+        grid-column: 2 / 4;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer > .nav:nth-child(1){
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    footer > .nav:nth-child(2) {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    footer > .nav:nth-child(3) {
+        grid-row: 2;
+        grid-column: 1 / 2;
+        justify-self: start;
+    }
+
+}
+
+/* Breakpoint for tablet landscape & laptop  */
+@media (min-width: 1024px) {
+    main {
+        margin: 0 auto;
+        width: 65%;
+    }
+
+    .howto__img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .howto-container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px ,1fr));
+        gap: 4rem;
+        justify-items: center;
+    }
 }
