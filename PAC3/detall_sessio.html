@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header class="header">
+    <header>
 
         <div class="signin">
             <button class="button button--red">Inicia Sessió</button>
@@ -20,8 +20,10 @@
         
         <div class="logo">
             <a class="logo__link" href="index.html">
-                <img class="logo__img" src="./img/oscarsclub-isologo.png" alt="logo">
-                <strong>&nbsp;oscars</strong><span class="link">club</span>
+                <img class="logo__link__img" src="./img/oscarsclub-isologo.png" alt="logo">
+                <div class="logo__link__text">
+                    <strong>&nbsp;oscars</strong><span>club</span>
+                </div>
             </a>
         </div>
         
@@ -48,9 +50,9 @@
 
         <h1>Klaus</h1>
 
-        <section class="section section--tech-card">
+        <section class="master-detail">
 
-            <article>
+            <article class="master">
                 <h2>Fitxa tècnica</h2>
     
                 <dl>
@@ -77,7 +79,7 @@
                     </dl>
             </article>            
     
-            <article>
+            <article class="detail">
     
                     <h2>Sobre l'obre</h2>
                     <p>Adapta la llegenda del Pare Noel a un univers realista en què aquesta figura sorgeix des de zero. Per escriure el guió, Sergio Pablos va prendre els diferents elements que conformen la tradició i va voler reinventar-los sense elements màgics ni tòpics del cinema nadalenc. D'aquesta manera, totes les accions s'expliquen a través de les experiències del repartiment i de la tradició oral, especialment els actes de generositat desinteressada. </p>
@@ -106,7 +108,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer>
 
         <nav class="nav">
             <ul class="nav__menu nav__menu--secondary">
@@ -149,6 +151,10 @@
                 </li>
             </ul>
         </nav>
+
+        <a id="link-to-top" href="#">
+            &xwedge;
+        </a>
 
     </footer>
     

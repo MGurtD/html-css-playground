@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header class="header">
+    <header>
 
         <div class="signin">
             <button class="button button--red">Inicia Sessió</button>
@@ -20,8 +20,10 @@
         
         <div class="logo">
             <a class="logo__link" href="index.html">
-                <img class="logo__img" src="./img/oscarsclub-isologo.png" alt="logo">
-                <strong>&nbsp;oscars</strong><span class="link">club</span>
+                <img class="logo__link__img" src="./img/oscarsclub-isologo.png" alt="logo">
+                <div class="logo__link__text">
+                    <strong>&nbsp;oscars</strong><span>club</span>
+                </div>
             </a>
         </div>
         
@@ -41,7 +43,7 @@
     <main id="clubs-main">
 
         <h1>Els nostres clubs de cinema</h1>
-        <section>
+        <section id="clubs-container">
 
             <div id="club-guardonats" class="club">
                 <img class="club__img" src="./img/club1.jpg" />
@@ -89,7 +91,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer>
 
         <nav class="nav">
             <ul class="nav__menu nav__menu--secondary">
@@ -132,6 +134,10 @@
                 </li>
             </ul>
         </nav>
+
+        <a id="link-to-top" href="#">
+            &xwedge;
+        </a>
 
     </footer>
     
